@@ -312,26 +312,24 @@ class Module extends AbstractModule
             if (empty($extra_snippet)) {
                 $settings = $this->getServiceLocator()->get('Omeka\Settings');
                 $settings = $settings->get('googleanalytics', '');
-                if ($settings != null){
-                    if (isset($settings['additional_snippet'])) {
+                if ($settings != null)
+                    // Assuming this is part of the code where you handle the extra snippet
+                    if (isset($settings['additional_snippet']) && !empty($settings['additional_snippet'])) {
                         $extra_snippet = $settings['additional_snippet'];
                     } else {
-                        $extra_snippet = "";
+                        $extra_snippet = ''; // Default value if 'additional_snippet' key is not set
                     }
-                }
-
             }
             if (empty($extra_snippet)) {
                 $settings = $this->getServiceLocator()->get('Omeka\Settings');
                 $settings = $settings->get('googleanalytics', '');
-                if ($settings != null){
-                    if (isset($settings['additional_snippet'])) {
+                if ($settings != null)
+                    // Assuming this is part of the code where you handle the extra snippet
+                    if (isset($settings['additional_snippet']) && !empty($settings['additional_snippet'])) {
                         $extra_snippet = $settings['additional_snippet'];
                     } else {
-                        $extra_snippet = "";
+                        $extra_snippet = ''; // Default value if 'additional_snippet' key is not set
                     }
-                }
-
             }
 
 
